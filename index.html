@@ -17,6 +17,9 @@ body::before{background:#FF2D78;top:-90px;left:-90px}body::after{background:#00C
 @keyframes fl{to{transform:translate(70px,50px) scale(1.2)}}
 .w{max-width:940px;margin:0 auto;padding:16px}
 header{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+/* Ajustes para uso em celulares */
+button,input,select{touch-action:manipulation}button{min-height:38px}input,select{min-height:40px}.card{min-width:0}
+@media(max-width:600px){.w{padding:12px}.xp{min-width:0;text-align:left;width:100%}h1{font-size:23px}h2{font-size:21px}nav{position:sticky;top:0;z-index:20;background:var(--bg);padding:8px 2px}nav button{flex:0 0 auto;white-space:nowrap}.grid{grid-template-columns:minmax(0,1fr)}.card{padding:12px}input:not([type=checkbox]),select{max-width:100%}}
 h1{font-size:24px;font-weight:800;margin:0;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
 h2{font-size:24px;font-weight:800;margin:14px 0 4px}h3{font-size:15px;margin:0;font-weight:700}
 .mu{color:var(--mu);font-size:13px}
@@ -155,4 +158,4 @@ function vQuest(){
  var ex='https://www.enemwiki.com.br/';
  return '<div><h2>Banco de questões</h2><p class="mu">Abra as provas ENEM 2020–2025, resolva e registre aqui cada questão. O app monta seu caderno de erros e seu Raio-X.</p></div>'+
  '<div class="card"><h3>📂 Provas por ano</h3><div class="lk" style="padding-left:0">'+YS.map(function(y){return '<a class="chip" target="_blank" rel="noopener" href="'+ex+'provas?ano='+y+'">ENEM '+y+'</a>'}).join('')+'</div><div class="lk" style="padding-left:0"><a class="chip" target="_blank" rel="noopener" href="'+ex+'questoes">🧠 Banco no ENEM Wiki</a><a class="chip" target="_blank" rel="noopener" href="'+ex+'simulado">⏱️ Simulado</a><a class="chip" target="_blank" rel="noopener" href="'+ex+'simulador">🧮 Simulador de nota</a><a class="chip" target="_blank" rel="noopener" href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos">🏛️ Provas oficiais (INEP)</a></div></div>'+
- '<div class="card"><h3>➕ Registrar questão resolvida</h3><div class="row" style="flex-wrap:wrap"><select id="qy">'+YS.map(function(y){return '<option'+(y==sy?' selected':'')+'>'+y+'</option>'}).join('')+'</select><select id="qs">'+S.map(function(s){return '<option value="'+s.id+'">'+esc(s.n)+'</option>'}).join('')+'</select><input id="qn" type="number" min="1" max="180" placeholder="Nº" style="width:70px"><select id="qr"><option value="ok">✅ Acertei</option><option value="err">❌ Errei</option><option value="gu">🎲 Chutei</option></selec
+ '<div class="card"><h3>➕ Registrar questão
